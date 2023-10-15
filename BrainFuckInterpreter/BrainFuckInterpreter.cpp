@@ -62,7 +62,7 @@ std::string translate(std::string& code, std::string input = "")
 {
     auto code_pointer = code.begin();
     auto input_iterator = input.begin();
-    const int SIZE = 1000;
+    const int SIZE = 30000;
     unsigned char* const mass = new unsigned char[SIZE] {};
     unsigned char* data_pointer = &mass[5];
     std::string res = "";

@@ -17,7 +17,6 @@ void move_input_iterator_right(std::string::iterator& input_iterator, std::strin
 {
     if (input_iterator >= end_input_iterator)
     {
-        std::cout << "\n";
         throw exc("OUT OF RANGE INPUT ITERATOR number element of code - ", index);
     }
     input_iterator++;
@@ -27,8 +26,7 @@ void move_code_pointer_right(std::string::iterator& code_pointer, std::string::i
 {
     if (code_pointer >= end_code_pointer)
     {
-        std::cout << "OUT OF RANGE CODE POINTER > \n";
-        throw exc("code p wrong! number element of code - ", index);
+        throw exc("OUT OF RANGE CODE POINTER > in right side! number element of code - ", index);
     }
     code_pointer++;
 }
@@ -36,8 +34,7 @@ void move_code_pointer_left(std::string::iterator& code_pointer, std::string::it
 {
     if (code_pointer <= begin_code_pointer)
     {
-        std::cout << "OUT OF RANGE CODE POINTER  < \n";
-        throw exc("code p wrong! number element of code - ", index);
+        throw exc("OUT OF RANGE CODE POINTER  < in left side ! number element of code - ", index);
     }
     code_pointer--;
 }
@@ -45,8 +42,7 @@ void move_data_pointer_right(unsigned char*& data_pointer, unsigned char* end_da
 {
     if (data_pointer >= end_data_pointer)
     {
-        std::cout << "OUT OF RANGE DATA POINTER > \n";
-        throw exc("data p wrong! number element of code - ", index);
+        throw exc("OUT OF RANGE DATA POINTER > in right side! number element of code - ", index);
     }
     data_pointer++;
 }
@@ -55,11 +51,9 @@ void move_data_pointer_left(unsigned char*& data_pointer, unsigned char* begin_d
 {
     if (data_pointer <= begin_data_pointer)             // проверка выхода за пределы
     {
-        //std::cout << "OUT OF RANGE DATA POINTER < \n";
-        //throw exc("data p wrong! number element of code - ",index);
+        throw exc("OUT OF RANGE DATA POINTER < in left side! number element of code - ",index);
     }
-    else
-        data_pointer--;
+    data_pointer--;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
